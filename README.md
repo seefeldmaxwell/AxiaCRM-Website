@@ -12,7 +12,7 @@ A high-performance Next.js landing page optimized for Cloudflare Pages deploymen
 2. Select `seefeldmaxwell/AxiaCRM-Website` (or your fork) → Click "Begin setup"
 3. **Configure deployment settings**:
    - Build command: `npm run build`
-   - Deploy command: `npx wrangler pages deploy out`
+   - Deploy command: `npx wrangler pages deploy out --project-name=$CF_PAGES_PROJECT_NAME`
 4. Click "Save and Deploy"
 
 Your site will be live in under 2 minutes at `https://[your-project].pages.dev` ⚡
@@ -21,10 +21,10 @@ Your site will be live in under 2 minutes at `https://[your-project].pages.dev` 
 - ✅ Framework: Next.js (Static HTML Export)
 - ✅ Build command: `npm run build`
 - ✅ Build output directory: `out` (automatically deployed)
-- ✅ Deploy command: `npx wrangler pages deploy out`
+- ✅ Deploy command: `npx wrangler pages deploy out --project-name=$CF_PAGES_PROJECT_NAME`
 - ✅ Node version: 20 (auto-detected)
 
-> **Note:** Cloudflare Pages automatically detects Next.js projects. The `wrangler pages deploy out` command deploys the static files from the `out` directory.
+> **Note:** The `$CF_PAGES_PROJECT_NAME` environment variable is automatically provided by Cloudflare Pages and contains your project name.
 
 ## Features
 
@@ -80,13 +80,13 @@ The static files will be generated in the `out` directory.
 3. Configure build settings:
    - **Framework preset**: Next.js (Static HTML Export)
    - **Build command**: `npm run build`
-   - **Deploy command**: `npx wrangler pages deploy out`
+   - **Deploy command**: `npx wrangler pages deploy out --project-name=$CF_PAGES_PROJECT_NAME`
    - **Root directory**: `/` (leave default)
 4. Click "Save and Deploy"
 
 Your site will be live at `https://[your-project].pages.dev` in under 2 minutes! ⚡
 
-> **Note:** The `wrangler pages deploy out` command tells Cloudflare to deploy the static files generated in the `out` directory after the build completes.
+> **Note:** The `$CF_PAGES_PROJECT_NAME` environment variable is automatically set by Cloudflare Pages to your project name, enabling seamless deployment.
 
 ### Manual Deployment with Wrangler
 
