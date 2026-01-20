@@ -1,5 +1,0 @@
-name = "axiacrm-website"
-compatibility_date = "2026-01-20"
-
-[site]
-bucket = "./out"
