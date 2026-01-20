@@ -14,7 +14,7 @@ A high-performance Next.js landing page optimized for Cloudflare Pages deploymen
    - Framework preset: Next.js (Static HTML Export)
    - Build command: `npm run build`
    - Build output directory: `out`
-   - Deploy command: Leave empty or use `echo "Deployment complete"`
+   - Deploy command: `sh deploy.sh` (⚠️ use `sh`, not `/` or `./`)
 4. Click "Save and Deploy"
 
 Your site will be live in under 2 minutes at `https://[your-project].pages.dev` ⚡
@@ -23,11 +23,11 @@ Your site will be live in under 2 minutes at `https://[your-project].pages.dev` 
 - ✅ Framework: Next.js (Static HTML Export)
 - ✅ Build command: `npm run build`
 - ✅ Build output directory: `out`
-- ✅ Deploy command: Auto-deployment (no command needed)
+- ✅ Deploy command: `sh deploy.sh` (placeholder script)
 - ✅ Configuration: `wrangler.toml` (auto-configured)
 - ✅ Node version: 20 (auto-detected)
 
-> **Note:** Cloudflare Pages automatically deploys the `out` directory after the build completes. No deploy command is needed for GitHub-integrated deployments.
+> **Note:** The `deploy.sh` script is a placeholder that satisfies Cloudflare's required deploy command field. Use `sh deploy.sh` (not `/deploy.sh` or `./deploy.sh`). After it completes, Cloudflare Pages automatically deploys the `out` directory.
 
 ## Features
 
@@ -84,13 +84,13 @@ The static files will be generated in the `out` directory.
    - **Framework preset**: Next.js (Static HTML Export)
    - **Build command**: `npm run build`
    - **Build output directory**: `out`
-   - **Deploy command**: Leave empty or use `echo "Deployment complete"`
+   - **Deploy command**: `sh deploy.sh` (⚠️ use `sh`, not `/` or `./`)
    - **Root directory**: `/` (leave default)
 4. Click "Save and Deploy"
 
 Your site will be live at `https://[your-project].pages.dev` in under 2 minutes! ⚡
 
-> **Note:** Cloudflare Pages automatically deploys the `out` directory after the build completes. The deploy command field can be left empty or use a simple echo command - no wrangler commands are needed for GitHub-integrated deployments.
+> **Note:** The `deploy.sh` script is a placeholder that avoids wrangler authentication issues. Use `sh deploy.sh` (not `/deploy.sh` or `./deploy.sh`). After it completes, Cloudflare Pages automatically deploys the `out` directory. No wrangler commands are needed for GitHub-integrated deployments.
 
 ### Manual Deployment with Wrangler
 
