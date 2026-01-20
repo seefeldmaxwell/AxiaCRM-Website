@@ -2,18 +2,20 @@
 
 A high-performance Next.js landing page optimized for Cloudflare Pages deployment.
 
-[![Deploy to Cloudflare Pages](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/seefeldmaxwell/AxiaCRM-Website)
+[![Deploy to Cloudflare Pages](https://deploy.workers.cloudflare.com/button)](https://dash.cloudflare.com/?to=/:account/pages/new)
 
 ## Quick Deploy
 
-**One-Click Deploy to Cloudflare Pages:**
+**Deploy to Cloudflare Pages in 3 Steps:**
 
-Click the button above or [deploy directly here](https://pages.cloudflare.com/new?from=https://github.com/seefeldmaxwell/AxiaCRM-Website) to instantly launch your own Axia CRM landing page.
+1. **[Fork this repository](https://github.com/seefeldmaxwell/AxiaCRM-Website/fork)** to your GitHub account
+2. **[Go to Cloudflare Pages](https://dash.cloudflare.com/?to=/:account/pages/new)** and connect your GitHub
+3. Select the forked repository and use these settings:
+   - **Build command:** `npm run build`
+   - **Build output directory:** `out`
+   - **Node version:** 20 (automatic)
 
-**Build Configuration:**
-- **Build command:** `npm run build`
-- **Build output directory:** `out`
-- **Node version:** 20
+That's it! Your site will be live in under 2 minutes. ⚡
 
 ## Features
 
