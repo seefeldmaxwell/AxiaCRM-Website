@@ -10,21 +10,21 @@ A high-performance Next.js landing page optimized for Cloudflare Pages deploymen
 
 1. **[Click here to connect GitHub](https://dash.cloudflare.com/?to=/:account/pages/new)** → Select "Continue with GitHub"
 2. Select `seefeldmaxwell/AxiaCRM-Website` (or your fork) → Click "Begin setup"
-3. **Use default settings** (Cloudflare auto-detects everything):
-   - Build command: `npm run build` ✅ (auto-detected)
-   - Deploy command: `npx wrangler deploy` ✅ (default, works automatically)
+3. **Configure deployment settings**:
+   - Build command: `npm run build`
+   - Deploy command: `npx wrangler pages deploy out`
 4. Click "Save and Deploy"
 
 Your site will be live in under 2 minutes at `https://[your-project].pages.dev` ⚡
 
 **Build Configuration:**
 - ✅ Framework: Next.js (Static HTML Export)
-- ✅ Build command: `npm run build` (auto-detected)
-- ✅ Build output directory: `out` (configured in wrangler.toml)
-- ✅ Deploy command: `npx wrangler deploy` (default, uses wrangler.toml)
+- ✅ Build command: `npm run build`
+- ✅ Build output directory: `out` (automatically deployed)
+- ✅ Deploy command: `npx wrangler pages deploy out`
 - ✅ Node version: 20 (auto-detected)
 
-> **Note:** The project includes a `wrangler.toml` configuration file that tells Cloudflare where to find the built static files. No manual configuration needed!
+> **Note:** Cloudflare Pages automatically detects Next.js projects. The `wrangler pages deploy out` command deploys the static files from the `out` directory.
 
 ## Features
 
@@ -73,20 +73,20 @@ The static files will be generated in the `out` directory.
 
 ## Deployment to Cloudflare Pages
 
-### One-Click Deploy
+### GitHub Integration (Recommended)
 
 1. **[Click here to deploy](https://dash.cloudflare.com/?to=/:account/pages/new)** → Select "Connect to Git"
 2. Choose your repository: `seefeldmaxwell/AxiaCRM-Website`
-3. Use default settings (auto-detected):
+3. Configure build settings:
    - **Framework preset**: Next.js (Static HTML Export)
    - **Build command**: `npm run build`
-   - **Deploy command**: `npx wrangler deploy` (default)
+   - **Deploy command**: `npx wrangler pages deploy out`
    - **Root directory**: `/` (leave default)
 4. Click "Save and Deploy"
 
 Your site will be live at `https://[your-project].pages.dev` in under 2 minutes! ⚡
 
-> **Note:** The included `wrangler.toml` file configures the `out` directory as the deployment source. The default `npx wrangler deploy` command works automatically—no manual configuration needed!
+> **Note:** The `wrangler pages deploy out` command tells Cloudflare to deploy the static files generated in the `out` directory after the build completes.
 
 ### Manual Deployment with Wrangler
 
