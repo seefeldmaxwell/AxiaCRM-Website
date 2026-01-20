@@ -6,20 +6,24 @@ A high-performance Next.js landing page optimized for Cloudflare Pages deploymen
 
 ## Quick Deploy
 
-**Deploy to Cloudflare Pages in 2 clicks:**
+**Deploy to Cloudflare Pages:**
 
 1. **[Click here to connect GitHub](https://dash.cloudflare.com/?to=/:account/pages/new)** → Select "Continue with GitHub"
 2. Select `seefeldmaxwell/AxiaCRM-Website` (or your fork) → Click "Begin setup"
+3. **Configure settings** (Cloudflare auto-detects most):
+   - Build command: `npm run build`
+   - Build output: `out`
+   - Deploy command: `echo "Deployment complete"`
+4. Click "Save and Deploy"
 
-**Cloudflare will automatically detect:**
-- ✅ Framework: Next.js
+Your site will be live in under 2 minutes at `https://[your-project].pages.dev` ⚡
+
+**Build Configuration:**
+- ✅ Framework: Next.js (Static HTML Export)
 - ✅ Build command: `npm run build`
 - ✅ Build output directory: `out`
-- ✅ Node version: 20
-
-Just click "Save and Deploy" - that's it! Your site will be live in under 2 minutes. ⚡
-
-> **Note:** Cloudflare Pages automatically detects Next.js projects and pre-fills all build settings. No manual configuration needed!
+- ✅ Deploy command: `echo "Deployment complete"` (placeholder for required field)
+- ✅ Node version: 20 (auto-detected)
 
 ## Features
 
@@ -68,22 +72,23 @@ The static files will be generated in the `out` directory.
 
 ## Deployment to Cloudflare Pages
 
-### Option 1: GitHub Integration (Recommended)
+### One-Click Deploy
 
-1. Go to [Cloudflare Pages Dashboard](https://dash.cloudflare.com/?to=/:account/pages)
-2. Click "Create a project" → "Connect to Git"
-3. Select your GitHub repository
-4. Configure build settings:
+1. **[Click here to deploy](https://dash.cloudflare.com/?to=/:account/pages/new)** → Select "Connect to Git"
+2. Choose your repository: `seefeldmaxwell/AxiaCRM-Website`
+3. Configure build settings (auto-detected):
    - **Framework preset**: Next.js (Static HTML Export)
    - **Build command**: `npm run build`
    - **Build output directory**: `out`
+   - **Deploy command**: `echo "Deployment complete"`
    - **Root directory**: `/` (leave default)
-   - **Deploy command**: Leave EMPTY (do not set a deploy command)
-5. Click "Save and Deploy"
+4. Click "Save and Deploy"
 
-**Important:** Do NOT configure a deploy command. Cloudflare Pages automatically handles deployment after the build completes.
+Your site will be live at `https://[your-project].pages.dev` in under 2 minutes! ⚡
 
-### Option 2: Manual Deployment with Wrangler
+> **Note:** The deploy command `echo "Deployment complete"` is a placeholder. Cloudflare Pages automatically deploys the `out` directory after the build completes.
+
+### Manual Deployment with Wrangler
 
 For one-time or CI/CD deployments:
 
@@ -94,8 +99,10 @@ npm install -g wrangler
 # Login to Cloudflare
 wrangler login
 
-# Build and deploy
+# Build the project
 npm run build
+
+# Deploy to Cloudflare Pages
 wrangler pages deploy out --project-name=axiacrm
 ```
 
