@@ -13,7 +13,7 @@ A high-performance Next.js landing page optimized for Cloudflare Pages deploymen
 3. **Configure deployment settings**:
    - Build command: `npm run build`
    - Build output directory: `out`
-   - Deploy command: **Leave EMPTY** (Cloudflare handles deployment automatically)
+   - Deploy command: `echo "Build complete - Cloudflare will auto-deploy"`
 4. Click "Save and Deploy"
 
 Your site will be live in under 2 minutes at `https://[your-project].pages.dev` ⚡
@@ -22,10 +22,10 @@ Your site will be live in under 2 minutes at `https://[your-project].pages.dev` 
 - ✅ Framework: Next.js (Static HTML Export)
 - ✅ Build command: `npm run build`
 - ✅ Build output directory: `out`
-- ✅ Deploy command: None (automatic)
+- ✅ Deploy command: `echo "Build complete - Cloudflare will auto-deploy"`
 - ✅ Node version: 20 (auto-detected)
 
-> **Note:** Cloudflare Pages automatically deploys the contents of the `out` directory after a successful build. No deploy command is needed for static sites.
+> **Note:** The deploy command is a placeholder since Cloudflare Pages requires it, but the actual deployment is handled automatically after the build completes.
 
 ## Features
 
@@ -82,13 +82,13 @@ The static files will be generated in the `out` directory.
    - **Framework preset**: Next.js (Static HTML Export)
    - **Build command**: `npm run build`
    - **Build output directory**: `out`
-   - **Deploy command**: Leave EMPTY (automatic deployment)
+   - **Deploy command**: `echo "Build complete - Cloudflare will auto-deploy"`
    - **Root directory**: `/` (leave default)
 4. Click "Save and Deploy"
 
 Your site will be live at `https://[your-project].pages.dev` in under 2 minutes! ⚡
 
-> **Note:** Cloudflare Pages automatically deploys static files from the build output directory. No deploy command is needed - just specify the `out` directory and Cloudflare handles the rest.
+> **Note:** The `echo` command is a placeholder that satisfies Cloudflare's required field. After the build completes, Cloudflare Pages automatically deploys the contents of the `out` directory.
 
 ### Manual Deployment with Wrangler
 
