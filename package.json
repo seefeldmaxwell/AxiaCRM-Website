@@ -2,6 +2,11 @@
   "name": "axiacrm-website",
   "version": "0.1.0",
   "private": true,
+  "description": "High-performance Next.js landing page for Axia CRM optimized for Cloudflare Pages",
+  "keywords": ["nextjs", "cloudflare-pages", "crm", "landing-page"],
+  "engines": {
+    "node": ">=20.0.0"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
