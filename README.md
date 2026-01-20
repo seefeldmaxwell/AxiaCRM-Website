@@ -68,34 +68,33 @@ The static files will be generated in the `out` directory.
 
 ## Deployment to Cloudflare Pages
 
-### Option 1: Automatic Deployment (Recommended)
+### Option 1: GitHub Integration (Recommended)
 
-1. Push your code to GitHub
-2. Go to [Cloudflare Pages](https://pages.cloudflare.com/)
-3. Connect your GitHub repository
+1. Go to [Cloudflare Pages Dashboard](https://dash.cloudflare.com/?to=/:account/pages)
+2. Click "Create a project" → "Connect to Git"
+3. Select your GitHub repository
 4. Configure build settings:
+   - **Framework preset**: Next.js (Static HTML Export)
    - **Build command**: `npm run build`
    - **Build output directory**: `out`
-   - **Root directory**: `/`
+   - **Root directory**: `/` (leave default)
+   - **Deploy command**: Leave EMPTY (do not set a deploy command)
 5. Click "Save and Deploy"
+
+**Important:** Do NOT configure a deploy command. Cloudflare Pages automatically handles deployment after the build completes.
 
 ### Option 2: Manual Deployment with Wrangler
 
-Install Wrangler CLI:
+For one-time or CI/CD deployments:
 
 ```bash
+# Install Wrangler
 npm install -g wrangler
-```
 
-Login to Cloudflare:
-
-```bash
+# Login to Cloudflare
 wrangler login
-```
 
-Deploy:
-
-```bash
+# Build and deploy
 npm run build
 wrangler pages deploy out --project-name=axiacrm
 ```
