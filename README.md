@@ -12,8 +12,8 @@ A high-performance Next.js landing page optimized for Cloudflare Pages deploymen
 2. Select `seefeldmaxwell/AxiaCRM-Website` (or your fork) → Click "Begin setup"
 3. **Configure deployment settings**:
    - Build command: `npm run build`
-   - Build output directory: `out`
-   - Deploy command: `echo "Build complete - Cloudflare will auto-deploy"`
+   - Deploy command: `npx wrangler pages deploy out --project-name=YOUR_PROJECT_NAME`
+   - Replace `YOUR_PROJECT_NAME` with your actual Cloudflare Pages project name
 4. Click "Save and Deploy"
 
 Your site will be live in under 2 minutes at `https://[your-project].pages.dev` ⚡
@@ -21,11 +21,10 @@ Your site will be live in under 2 minutes at `https://[your-project].pages.dev` 
 **Build Configuration:**
 - ✅ Framework: Next.js (Static HTML Export)
 - ✅ Build command: `npm run build`
-- ✅ Build output directory: `out`
-- ✅ Deploy command: `echo "Build complete - Cloudflare will auto-deploy"`
+- ✅ Deploy command: `npx wrangler pages deploy out --project-name=YOUR_PROJECT_NAME`
 - ✅ Node version: 20 (auto-detected)
 
-> **Note:** The deploy command is a placeholder since Cloudflare Pages requires it, but the actual deployment is handled automatically after the build completes.
+> **Note:** Replace `YOUR_PROJECT_NAME` with your Cloudflare Pages project name (e.g., `axiawebsite`). This command deploys the static files from the `out` directory.
 
 ## Features
 
