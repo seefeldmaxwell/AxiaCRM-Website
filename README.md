@@ -12,7 +12,8 @@ A high-performance Next.js landing page optimized for Cloudflare Pages deploymen
 2. Select `seefeldmaxwell/AxiaCRM-Website` (or your fork) → Click "Begin setup"
 3. **Configure deployment settings**:
    - Build command: `npm run build`
-   - Deploy command: `npx wrangler pages deploy out --project-name=$CF_PAGES_PROJECT_NAME`
+   - Build output directory: `out`
+   - Deploy command: **Leave EMPTY** (Cloudflare handles deployment automatically)
 4. Click "Save and Deploy"
 
 Your site will be live in under 2 minutes at `https://[your-project].pages.dev` ⚡
@@ -20,11 +21,11 @@ Your site will be live in under 2 minutes at `https://[your-project].pages.dev` 
 **Build Configuration:**
 - ✅ Framework: Next.js (Static HTML Export)
 - ✅ Build command: `npm run build`
-- ✅ Build output directory: `out` (automatically deployed)
-- ✅ Deploy command: `npx wrangler pages deploy out --project-name=$CF_PAGES_PROJECT_NAME`
+- ✅ Build output directory: `out`
+- ✅ Deploy command: None (automatic)
 - ✅ Node version: 20 (auto-detected)
 
-> **Note:** The `$CF_PAGES_PROJECT_NAME` environment variable is automatically provided by Cloudflare Pages and contains your project name.
+> **Note:** Cloudflare Pages automatically deploys the contents of the `out` directory after a successful build. No deploy command is needed for static sites.
 
 ## Features
 
@@ -80,13 +81,14 @@ The static files will be generated in the `out` directory.
 3. Configure build settings:
    - **Framework preset**: Next.js (Static HTML Export)
    - **Build command**: `npm run build`
-   - **Deploy command**: `npx wrangler pages deploy out --project-name=$CF_PAGES_PROJECT_NAME`
+   - **Build output directory**: `out`
+   - **Deploy command**: Leave EMPTY (automatic deployment)
    - **Root directory**: `/` (leave default)
 4. Click "Save and Deploy"
 
 Your site will be live at `https://[your-project].pages.dev` in under 2 minutes! ⚡
 
-> **Note:** The `$CF_PAGES_PROJECT_NAME` environment variable is automatically set by Cloudflare Pages to your project name, enabling seamless deployment.
+> **Note:** Cloudflare Pages automatically deploys static files from the build output directory. No deploy command is needed - just specify the `out` directory and Cloudflare handles the rest.
 
 ### Manual Deployment with Wrangler
 
