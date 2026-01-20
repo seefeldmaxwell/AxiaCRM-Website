@@ -1,6 +1,6 @@
 # Axia CRM Landing Page
 
-A high-performance Next.js landing page optimized for Cloudflare Pages deployment.
+A high-performance Next.js landing page optimized for Cloudflare Pages deployment. This is part of two repos you can use to create your own CRM Company I would appreciate you submit commits to mainline as well as I'm terminating my employement with the company this was made for and opensourcing this project was made to keep the CRM alive in my Absence
 
 [![Deploy to Cloudflare Pages](https://deploy.workers.cloudflare.com/button)](https://dash.cloudflare.com/?to=/:account/pages/new)
 
