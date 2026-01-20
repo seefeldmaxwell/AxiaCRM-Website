@@ -11,9 +11,10 @@ A high-performance Next.js landing page optimized for Cloudflare Pages deploymen
 1. **[Click here to connect GitHub](https://dash.cloudflare.com/?to=/:account/pages/new)** → Select "Continue with GitHub"
 2. Select `seefeldmaxwell/AxiaCRM-Website` (or your fork) → Click "Begin setup"
 3. **Configure deployment settings**:
+   - Framework preset: Next.js (Static HTML Export)
    - Build command: `npm run build`
-   - Deploy command: `npx wrangler pages deploy`
-   - Non-production deploy command: `npx wrangler pages deploy`
+   - Build output directory: `out`
+   - Deploy command: Leave empty or use `echo "Deployment complete"`
 4. Click "Save and Deploy"
 
 Your site will be live in under 2 minutes at `https://[your-project].pages.dev` ⚡
@@ -21,11 +22,12 @@ Your site will be live in under 2 minutes at `https://[your-project].pages.dev` 
 **Build Configuration:**
 - ✅ Framework: Next.js (Static HTML Export)
 - ✅ Build command: `npm run build`
-- ✅ Deploy command: `npx wrangler pages deploy`
+- ✅ Build output directory: `out`
+- ✅ Deploy command: Auto-deployment (no command needed)
 - ✅ Configuration: `wrangler.toml` (auto-configured)
 - ✅ Node version: 20 (auto-detected)
 
-> **Note:** The `wrangler.toml` file configures the project name and output directory automatically.
+> **Note:** Cloudflare Pages automatically deploys the `out` directory after the build completes. No deploy command is needed for GitHub-integrated deployments.
 
 ## Features
 
@@ -82,13 +84,13 @@ The static files will be generated in the `out` directory.
    - **Framework preset**: Next.js (Static HTML Export)
    - **Build command**: `npm run build`
    - **Build output directory**: `out`
-   - **Deploy command**: `echo "Build complete - Cloudflare will auto-deploy"`
+   - **Deploy command**: Leave empty or use `echo "Deployment complete"`
    - **Root directory**: `/` (leave default)
 4. Click "Save and Deploy"
 
 Your site will be live at `https://[your-project].pages.dev` in under 2 minutes! ⚡
 
-> **Note:** The `echo` command is a placeholder that satisfies Cloudflare's required field. After the build completes, Cloudflare Pages automatically deploys the contents of the `out` directory.
+> **Note:** Cloudflare Pages automatically deploys the `out` directory after the build completes. The deploy command field can be left empty or use a simple echo command - no wrangler commands are needed for GitHub-integrated deployments.
 
 ### Manual Deployment with Wrangler
 
